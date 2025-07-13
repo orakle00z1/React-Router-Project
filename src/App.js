@@ -1,21 +1,16 @@
-// import { useState } from "react";
 import React from "react";
-import "./input.css";
-import routes from "./routes";
+import Navbar from "./components/Navbar";
 import { useRoutes } from "react-router-dom";
-import Topbar from "./components/topbar";
-import Sidebar from "./components/sidebar";
+import routes from "./routes";
+import "./input.css";
 
 export default function App() {
   let router = useRoutes(routes);
 
   return (
     <>
-      <Topbar />
-      <div>
-        <Sidebar />
-        {router}
-      </div>
+      <Navbar />
+      {router}
     </>
   );
 }

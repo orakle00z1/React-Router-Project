@@ -1,208 +1,32 @@
-let xAxisData = [
-  {
-    name: "Jan",
-    sale: 20_000,
-  },
-  {
-    name: "Feb",
-    sale: 80_000,
-  },
-  {
-    name: "March",
-    sale: 112_000,
-  },
-  {
-    name: "April",
-    sale: 100_000,
-  },
-  {
-    name: "May",
-    sale: 115_000,
-  },
-  {
-    name: "June",
-    sale: 99_000,
-  },
-  {
-    name: "July",
-    sale: 20_000,
-  },
-  {
-    name: "Aug",
-    sale: 105_000,
-  },
-  {
-    name: "Sep",
-    sale: 110_000,
-  },
-  {
-    name: "Oct",
-    sale: 115_000,
-  },
-  {
-    name: "Nov",
-    sale: 120_000,
-  },
-  {
-    name: "Des",
-    sale: 125_000,
-  },
-];
-
-const newMembers = [
+const Data = [
   {
     id: 1,
-    username: "sara",
-    title: "web developer",
-    img: "img/profile.png",
+    title: "item1",
+    price: 150,
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mollis ante et bibendum faucibus. Duis iaculis suscipit porta. Fusce commodo, felis sit amet ultrices vehicula, eros tellus vulputate turpis, sed consectetur libero dui tincidunt sem. Quisque mattis quam nisi, eget accumsan lectus finibus sed. Curabitur feugiat commodo elementum. Aliquam ac malesuada tortor, ut fermentum turpis. Cras posuere lacus eu blandit ultrices. Etiam eu finibus mi, eget viverra justo. Aenean ac neque et augue vestibulum eleifend sit amet eget turpis. Aenean eu nulla risus.Etiam ac scelerisque quam, et consequat urna. Nullam sit amet elementum justo. Cras fermentum luctus orci ac sollicitudin. Nulla semper tellus at leo finibus dictum. Vivamus tincidunt orci leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean aliquet, neque quis porta volutpat, augue nisi malesuada est, a porttitor libero elit sed turpis.Nunc ultricies sagittis tempus. Aliquam erat volutpat. Vestibulum pretium augue a eros tincidunt venenatis. Proin eu mauris mollis, vehicula purus id, venenatis sapien. Morbi in sagittis tortor. Ut laoreet, ex et rutrum posuere, est elit interdum nibh, quis finibus odio nibh at purus. Donec mattis, elit ac aliquet convallis, nibh lectus hendrerit lectus, in auctor nibh lectus at nunc. In ipsum nibh, pulvinar sit amet bibendum quis, facilisis in eros. Aliquam libero metus, faucibus nec ultrices vel, efficitur eget diam. Morbi ut urna malesuada, dapibus justo vitae, imperdiet est. Curabitur et odio a augue faucibus placerat et sit amet lectus. Ut tempor tellus at pharetra lacinia. Curabitur et leo ultrices, vestibulum odio in, malesuada diam. Proin ex ex, porttitor eget consectetur ac, pulvinar quis erat.Etiam id euismod metus. Quisque at diam arcu. Mauris semper porta erat id rutrum. Nunc sit amet felis sit amet dolor finibus venenatis. Mauris commodo quam nibh, sed euismod lectus egestas nec. Aliquam sit amet feugiat justo. Donec maximus placerat lectus et fringilla. Proin felis nibh, efficitur a lorem viverra, eleifend tempus nibh. Cras ac magna condimentum, dignissim felis eu, facilisis ante. Phasellus efficitur turpis et dolor imperdiet, vel gravida arcu sagittis. Vestibulum mollis ante eu eleifend aliquam. Etiam tincidunt viverra nisi id varius. Praesent non hendrerit turpis, id ultrices ligula. Nullam sed sapien mauris.",
+    image: "/img/p5.png",
   },
   {
     id: 2,
-    username: "david",
-    title: "Backend developer",
-    img: "img/profile.png",
+    title: "item2",
+    price: 220,
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mollis ante et bibendum faucibus. Duis iaculis suscipit porta. Fusce commodo, felis sit amet ultrices vehicula, eros tellus vulputate turpis, sed consectetur libero dui tincidunt sem. Quisque mattis quam nisi, eget accumsan lectus finibus sed. Curabitur feugiat commodo elementum. Aliquam ac malesuada tortor, ut fermentum turpis. Cras posuere lacus eu blandit ultrices. Etiam eu finibus mi, eget viverra justo. Aenean ac neque et augue vestibulum eleifend sit amet eget turpis. Aenean eu nulla risus.Etiam ac scelerisque quam, et consequat urna. Nullam sit amet elementum justo. Cras fermentum luctus orci ac sollicitudin. Nulla semper tellus at leo finibus dictum. Vivamus tincidunt orci leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean aliquet, neque quis porta volutpat, augue nisi malesuada est, a porttitor libero elit sed turpis.Nunc ultricies sagittis tempus. Aliquam erat volutpat. Vestibulum pretium augue a eros tincidunt venenatis. Proin eu mauris mollis, vehicula purus id, venenatis sapien. Morbi in sagittis tortor. Ut laoreet, ex et rutrum posuere, est elit interdum nibh, quis finibus odio nibh at purus. Donec mattis, elit ac aliquet convallis, nibh lectus hendrerit lectus, in auctor nibh lectus at nunc. In ipsum nibh, pulvinar sit amet bibendum quis, facilisis in eros. Aliquam libero metus, faucibus nec ultrices vel, efficitur eget diam. Morbi ut urna malesuada, dapibus justo vitae, imperdiet est. Curabitur et odio a augue faucibus placerat et sit amet lectus. Ut tempor tellus at pharetra lacinia. Curabitur et leo ultrices, vestibulum odio in, malesuada diam. Proin ex ex, porttitor eget consectetur ac, pulvinar quis erat.Etiam id euismod metus. Quisque at diam arcu. Mauris semper porta erat id rutrum. Nunc sit amet felis sit amet dolor finibus venenatis. Mauris commodo quam nibh, sed euismod lectus egestas nec. Aliquam sit amet feugiat justo. Donec maximus placerat lectus et fringilla. Proin felis nibh, efficitur a lorem viverra, eleifend tempus nibh. Cras ac magna condimentum, dignissim felis eu, facilisis ante. Phasellus efficitur turpis et dolor imperdiet, vel gravida arcu sagittis. Vestibulum mollis ante eu eleifend aliquam. Etiam tincidunt viverra nisi id varius. Praesent non hendrerit turpis, id ultrices ligula. Nullam sed sapien mauris.",
+    image: "/img/p6.png",
   },
   {
     id: 3,
-    username: "Kai",
-    title: "CEO ",
-    img: "img/profile.png",
+    title: "item3",
+    price: 930,
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mollis ante et bibendum faucibus. Duis iaculis suscipit porta. Fusce commodo, felis sit amet ultrices vehicula, eros tellus vulputate turpis, sed consectetur libero dui tincidunt sem. Quisque mattis quam nisi, eget accumsan lectus finibus sed. Curabitur feugiat commodo elementum. Aliquam ac malesuada tortor, ut fermentum turpis. Cras posuere lacus eu blandit ultrices. Etiam eu finibus mi, eget viverra justo. Aenean ac neque et augue vestibulum eleifend sit amet eget turpis. Aenean eu nulla risus.Etiam ac scelerisque quam, et consequat urna. Nullam sit amet elementum justo. Cras fermentum luctus orci ac sollicitudin. Nulla semper tellus at leo finibus dictum. Vivamus tincidunt orci leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean aliquet, neque quis porta volutpat, augue nisi malesuada est, a porttitor libero elit sed turpis.Nunc ultricies sagittis tempus. Aliquam erat volutpat. Vestibulum pretium augue a eros tincidunt venenatis. Proin eu mauris mollis, vehicula purus id, venenatis sapien. Morbi in sagittis tortor. Ut laoreet, ex et rutrum posuere, est elit interdum nibh, quis finibus odio nibh at purus. Donec mattis, elit ac aliquet convallis, nibh lectus hendrerit lectus, in auctor nibh lectus at nunc. In ipsum nibh, pulvinar sit amet bibendum quis, facilisis in eros. Aliquam libero metus, faucibus nec ultrices vel, efficitur eget diam. Morbi ut urna malesuada, dapibus justo vitae, imperdiet est. Curabitur et odio a augue faucibus placerat et sit amet lectus. Ut tempor tellus at pharetra lacinia. Curabitur et leo ultrices, vestibulum odio in, malesuada diam. Proin ex ex, porttitor eget consectetur ac, pulvinar quis erat.Etiam id euismod metus. Quisque at diam arcu. Mauris semper porta erat id rutrum. Nunc sit amet felis sit amet dolor finibus venenatis. Mauris commodo quam nibh, sed euismod lectus egestas nec. Aliquam sit amet feugiat justo. Donec maximus placerat lectus et fringilla. Proin felis nibh, efficitur a lorem viverra, eleifend tempus nibh. Cras ac magna condimentum, dignissim felis eu, facilisis ante. Phasellus efficitur turpis et dolor imperdiet, vel gravida arcu sagittis. Vestibulum mollis ante eu eleifend aliquam. Etiam tincidunt viverra nisi id varius. Praesent non hendrerit turpis, id ultrices ligula. Nullam sed sapien mauris.",
+    image: "/img/p7.png",
   },
   {
     id: 4,
-    username: "Lila",
-    title: "programmer",
-    img: "img/profile.png",
-  },
-  {
-    id: 5,
-    username: "Ali",
-    title: "Ceo programmer",
-    img: "img/profile.png",
+    title: "item4",
+    price: 640,
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mollis ante et bibendum faucibus. Duis iaculis suscipit porta. Fusce commodo, felis sit amet ultrices vehicula, eros tellus vulputate turpis, sed consectetur libero dui tincidunt sem. Quisque mattis quam nisi, eget accumsan lectus finibus sed. Curabitur feugiat commodo elementum. Aliquam ac malesuada tortor, ut fermentum turpis. Cras posuere lacus eu blandit ultrices. Etiam eu finibus mi, eget viverra justo. Aenean ac neque et augue vestibulum eleifend sit amet eget turpis. Aenean eu nulla risus.Etiam ac scelerisque quam, et consequat urna. Nullam sit amet elementum justo. Cras fermentum luctus orci ac sollicitudin. Nulla semper tellus at leo finibus dictum. Vivamus tincidunt orci leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean aliquet, neque quis porta volutpat, augue nisi malesuada est, a porttitor libero elit sed turpis.Nunc ultricies sagittis tempus. Aliquam erat volutpat. Vestibulum pretium augue a eros tincidunt venenatis. Proin eu mauris mollis, vehicula purus id, venenatis sapien. Morbi in sagittis tortor. Ut laoreet, ex et rutrum posuere, est elit interdum nibh, quis finibus odio nibh at purus. Donec mattis, elit ac aliquet convallis, nibh lectus hendrerit lectus, in auctor nibh lectus at nunc. In ipsum nibh, pulvinar sit amet bibendum quis, facilisis in eros. Aliquam libero metus, faucibus nec ultrices vel, efficitur eget diam. Morbi ut urna malesuada, dapibus justo vitae, imperdiet est. Curabitur et odio a augue faucibus placerat et sit amet lectus. Ut tempor tellus at pharetra lacinia. Curabitur et leo ultrices, vestibulum odio in, malesuada diam. Proin ex ex, porttitor eget consectetur ac, pulvinar quis erat.Etiam id euismod metus. Quisque at diam arcu. Mauris semper porta erat id rutrum. Nunc sit amet felis sit amet dolor finibus venenatis. Mauris commodo quam nibh, sed euismod lectus egestas nec. Aliquam sit amet feugiat justo. Donec maximus placerat lectus et fringilla. Proin felis nibh, efficitur a lorem viverra, eleifend tempus nibh. Cras ac magna condimentum, dignissim felis eu, facilisis ante. Phasellus efficitur turpis et dolor imperdiet, vel gravida arcu sagittis. Vestibulum mollis ante eu eleifend aliquam. Etiam tincidunt viverra nisi id varius. Praesent non hendrerit turpis, id ultrices ligula. Nullam sed sapien mauris.",
+    image: "/img/p8.png",
   },
 ];
 
-
-const transactions = [
-  {
-    id: 1,
-    username: "Emma Müller ",
-    date: "12 june 2022",
-    amount: "122$",
-    status: "Approved",
-    img: "img/profile.png",
-  },
-  {
-    id: 2,
-    username: "Lucas Schmidt",
-    date: "12 june 2022",
-    amount: "1000$",
-    status: "Declined",
-    img: "img/profile.png",
-  },
-  {
-    id: 3,
-    username: "Sofia Bauer",
-    date: "12 june 2022",
-    amount: "100$",
-    status: "Approved",
-    img: "img/profile.png",
-  },
-  {
-    id: 5,
-    username: "Lara Weber",
-    date: "12 june 2022",
-    amount: "172$",
-    status: "Pending",
-    img: "img/profile.png",
-  },
-  {
-    id: 4,
-    username: "Lara json",
-    date: "12 june 2022",
-    amount: "172$",
-    status: "Declined",
-    img: "img/profile.png",
-  },
-];
-
-let userRows = [
-  {
-    id: 1,
-    username: "Sofia Bauer",
-    img: "img/profile.png",
-    status: "active",
-    transaction: "120$",
-    email: "ajkehadjk@gmail.com",
-  },
-  {
-    id: 2,
-    username: "Emma Müller",
-    img: "img/profile.png",
-    status: "non-active",
-    transaction: "12000$",
-    email: "ajkehadjk@.com",
-  },
-  {
-    id: 3,
-    username: "Lara Weber",
-    img: "img/profile.png",
-    status: "active",
-    transaction: "1550$",
-    email: "ajkehadjk@gmail.com",
-  },
-  {
-    id: 4,
-    username: "Sofia Bauer",
-    img: "img/profile.png",
-    status: "active",
-    transaction: "120$",
-    email: "ajkehadjk@gmail.com",
-  },
-  {
-    id: 5,
-    username: "Sofia Bauer",
-    img: "img/profile.png",
-    status: "non-active",
-    transaction: "120$",
-    email: "ajkehadjk@.com",
-  },
-  {
-    id: 6,
-    username: "Sofia Bauer",
-    img: "img/profile.png",
-    status: "active",
-    transaction: "120$",
-    email: "ajkehadjk@gmail.com",
-  },
-];
-
-let product = [
-  {
-    id: 1,
-    name: "Asus tablet",
-    price: "900$",
-    img: "img/profile.png",
-  },
-  {
-    id: 2,
-    name: "Tuf tablet",
-    price: "910$",
-    img: "img/profile.png",
-  },
-  {
-    id: 3,
-    name: "hp tablet",
-    price: "990$",
-    img: "img/profile.png",
-  },
-  {
-    id: 4,
-    name: "del tablet",
-    price: "950$",
-    img: "img/profile.png",
-  },
-];
-
-
-export { xAxisData, newMembers, transactions, userRows, product };
+export default Data;
